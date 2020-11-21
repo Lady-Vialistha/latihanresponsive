@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="header">
+        <ul class="nav " id="navbar-menu">
+            <li class="nav-item">Home</li>
+            <li class="nav-item">About</li>
+            <li class="nav-item">FAQ</li>
+            <li class="nav-item">Terms and Conditions</li>
+        </ul>
+        <div class="btn-header" >
+            <button onclick="openHeaderMenu()" id="button-header">Buka</button>
+        </div>
+    </header>
+    <script>
+        function openHeaderMenu (){
+            var button = document.getElementById("button-header")
+           var target = document.getElementById("navbar-menu")
+           
+           
+           console.log(button.textContent)
+           if(button.textContent === "Buka"){
+                target.classList.add("active")
+                button.textContent ="tutup";
+           }
+           else{
+                target.classList.remove("active")
+                button.textContent ="Buka";
+           }
+        // if(button.textContent === "tutup"){
+        //         target.classList.remove("active")
+        //         button.textContent ="Buka";
+        //    }
+
+        }
+    </script>
+</body>
+
+</html>
